@@ -13,6 +13,9 @@
 		01D64C02237443E200AF9BBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D64C00237443E200AF9BBC /* Main.storyboard */; };
 		01D64C07237443E200AF9BBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01D64C05237443E200AF9BBC /* LaunchScreen.storyboard */; };
 		01E2DF2D23754F9A0096CBAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01E2DF2C23754F9A0096CBAB /* Assets.xcassets */; };
+		01E2DF3023755C3E0096CBAB /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2DF2F23755C3E0096CBAB /* PokemonModel.swift */; };
+		01E2DF35237577090096CBAB /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2DF34237577090096CBAB /* PokemonCell.swift */; };
+		01E2DF3723759D9C0096CBAB /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E2DF3623759D9C0096CBAB /* CSV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		01D64C06237443E200AF9BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01D64C08237443E200AF9BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01E2DF2C23754F9A0096CBAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01E2DF2F23755C3E0096CBAB /* PokemonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
+		01E2DF34237577090096CBAB /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		01E2DF3623759D9C0096CBAB /* CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		01D64BFB237443E200AF9BBC /* pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				01E2DF31237574B00096CBAB /* View */,
+				01E2DF2E23755C220096CBAB /* Model */,
 				01CD360323754B7D00648A4A /* pokemon.csv */,
 				01D64BFC237443E200AF9BBC /* AppDelegate.swift */,
 				01D64BFE237443E200AF9BBC /* ViewController.swift */,
 				01D64C00237443E200AF9BBC /* Main.storyboard */,
 				01D64C05237443E200AF9BBC /* LaunchScreen.storyboard */,
 				01D64C08237443E200AF9BBC /* Info.plist */,
+				01E2DF3623759D9C0096CBAB /* CSV.swift */,
 				01E2DF2C23754F9A0096CBAB /* Assets.xcassets */,
 			);
 			path = pokedex;
+			sourceTree = "<group>";
+		};
+		01E2DF2E23755C220096CBAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01E2DF2F23755C3E0096CBAB /* PokemonModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		01E2DF31237574B00096CBAB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01E2DF34237577090096CBAB /* PokemonCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +125,7 @@
 					01D64BF8237443E200AF9BBC = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 38JX7Z6N2M;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -143,6 +169,9 @@
 			files = (
 				01D64BFF237443E200AF9BBC /* ViewController.swift in Sources */,
 				01D64BFD237443E200AF9BBC /* AppDelegate.swift in Sources */,
+				01E2DF3723759D9C0096CBAB /* CSV.swift in Sources */,
+				01E2DF35237577090096CBAB /* PokemonCell.swift in Sources */,
+				01E2DF3023755C3E0096CBAB /* PokemonModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +293,6 @@
 		01D64C0C237443E200AF9BBC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 38JX7Z6N2M;
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -277,7 +305,6 @@
 		01D64C0D237443E200AF9BBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 38JX7Z6N2M;
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
